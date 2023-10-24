@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "shareYourCatFE"
+  "defaultProject": "shareYourCatFE",
+  "cli": {
+    "analytics": false
+  }
 }
