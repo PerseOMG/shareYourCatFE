@@ -35,8 +35,8 @@
                 "inject": false
               },
               {
-                "input": "src/assets/themes/calico.scss",
-                "bundleName": "calico",
+                "input": "src/assets/themes/siamese.scss",
+                "bundleName": "siamese",
                 "inject": false
               }
             ],

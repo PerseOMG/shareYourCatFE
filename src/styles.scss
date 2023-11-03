@@ -10,3 +10,12 @@ $tabby-cat-secondary: #5c6c70;
 $tabby-cat-ternary: #87888f;
 $tabby-cat-quaternary: #9499a4;
 $tabby-cat-fifth: #644435;
+:root {
+  --color-primary: #565b61;
+  --color-background-primary: #9499a4;
+}
+
+body {
+  color: var(--color-primary);
+  background: var(--color-background-primary);
+}

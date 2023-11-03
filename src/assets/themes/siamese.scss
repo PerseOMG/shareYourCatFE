@@ -4,7 +4,7 @@ $siamese-cat-secondary: #efdfbb;
 $siamese-cat-ternary: #c8ad7f;
 $siamese-cat-quaternary: #9f8170;
 $siamese-cat-fifth: #483c32;
-body {
-  background-color: $siamese-cat-primary;
-  color: $siamese-cat-fifth;
+:root {
+  --color-primary: #483c32;
+  --color-background-primary: #8cbed6;
 }
