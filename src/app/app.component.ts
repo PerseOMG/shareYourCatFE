@@ -12,6 +12,6 @@ export class AppComponent implements OnInit {
   constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {
-    this.themeService.loadTheme('calico');
+    this.themeService.loadTheme('siamese');
   }
 }

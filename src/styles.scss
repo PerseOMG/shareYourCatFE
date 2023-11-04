@@ -1,21 +1,22 @@
 // ORANGE
-$orange-cat-primary: #904617;
-$orange-cat-secondary: #cd9057;
-$orange-cat-ternary: #632307;
-$orange-cat-quaternary: #f3ddc6;
-$orange-cat-fifth: #ffffff;
-// Tabby Cat
-$tabby-cat-primary: #565b61;
-$tabby-cat-secondary: #5c6c70;
-$tabby-cat-ternary: #87888f;
-$tabby-cat-quaternary: #9499a4;
-$tabby-cat-fifth: #644435;
-:root {
-  --color-primary: #565b61;
-  --color-background-primary: #9499a4;
-}
-
+// $orange-cat-primary: #904617;
+// $orange-cat-secondary: #cd9057;
+// $orange-cat-ternary: #632307;
+// $orange-cat-quaternary: #f3ddc6;
+// $orange-cat-fifth: #ffffff;
+// // Tabby Cat
+// $tabby-cat-primary: #565b61;
+// $tabby-cat-secondary: #5c6c70;
+// $tabby-cat-ternary: #87888f;
+// $tabby-cat-quaternary: #9499a4;
+// $tabby-cat-fifth: #644435;
+// :root {
+//   --color-primary: #565b61;
+//   --color-background-primary: #9499a4;
+// }
+@import "src/assets/themes/calico.scss";
+// @import "src/assets/themes/siamese.scss";
 body {
-  color: var(--color-primary);
-  background: var(--color-background-primary);
+  color: $color-primary;
+  background: $color-fifth;
 }
