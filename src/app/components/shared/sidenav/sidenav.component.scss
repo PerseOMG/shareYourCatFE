@@ -1,0 +1,35 @@
+@import "../../../../styles.scss";
+.app {
+    &__navigation {
+        list-style: none;
+        padding: 0;
+        &-item {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+             :hover {
+                transition: box-shadow 0.5s ease-in-out;
+                transition: background-color 0.5s ease-in-out;
+                background-color: $calico-cat-secondary;
+                // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            }
+        }
+        &-icon {
+            height: 50px;
+            width: 50px;
+        }
+        &-logo {
+            background-color: $calico-cat-primary;
+            border: 1px $calico-cat-quaternary solid;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-img {
+                height: 75%;
+                width: 75%;
+            }
+        }
+    }
+}
