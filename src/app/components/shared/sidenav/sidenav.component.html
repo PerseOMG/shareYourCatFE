@@ -1,34 +1,10 @@
 <nav class="app__navigation-main-container">
     <ul class="app__navigation">
-        <div class="app__navigation-box">
-            <li class="app__navigation-item app__navigation-item-logo">
-                <div class="app__navigation-icon app__navigation-logo">
-                    <img src="../../../../assets/icons/cat-paws.svg" alt="logo" class="app__navigation-logo-img">
+        <div *ngFor="let box of navigationItems" class="app__navigation-box">
+            <li *ngFor="let item of box" class="app__navigation-item" [ngClass]=" item.type === 'logo' ? 'app__navigation-item-logo' : null ">
+                <div class="app__navigation-icon" [ngClass]=" item.type === 'logo' ? 'app__navigation-logo' : null " (click)="onClick(item.redirect)">
+                    <img [src]="'../../../../assets/icons/' + item.icon" [alt]="item.icon" [ngClass]=" item.type == 'logo' ? 'app__navigation-logo-img' : 'app__navigation-icon' ">
                 </div>
-            </li>
-
-            <li class="app__navigation-item">
-                <img class="app__navigation-icon" src=" ../../../../assets/icons/cat-dav.svg " alt="logo ">
-            </li>
-
-            <li class="app__navigation-item">
-                <img class="app__navigation-icon" src=" ../../../../assets/icons/cat-tendencies.svg " alt="logo ">
-            </li>
-        </div>
-
-        <div class="app__navigation-box">
-            <li class="app__navigation-item">
-                <img src=" ../../../../assets/icons/plus.svg" alt="logo ">
-            </li>
-        </div>
-
-        <div class="app__navigation-box">
-            <li class="app__navigation-item">
-                <img class="app__navigation-icon" src=" ../../../../assets/icons/user.svg " alt="logo ">
-            </li>
-
-            <li class="app__navigation-item">
-                <img class="app__navigation-icon" src=" ../../../../assets/icons/language.svg " alt="logo ">
             </li>
         </div>
     </ul>
