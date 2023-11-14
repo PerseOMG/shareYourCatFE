@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import {
   NAV_ITEMS_CONST,
   SQUARED_ICONS_CONST,
-} from 'src/assets/app-consts/sidenav.consts';
+} from '../../../../assets/app-consts/sidenav.consts';
 
 @Component({
   selector: 'app-sidenav',
