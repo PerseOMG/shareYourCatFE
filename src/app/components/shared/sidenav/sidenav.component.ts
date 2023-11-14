@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit {
+  squaredIcons = ['plus.svg'];
   navigationItems = [
     [
       {

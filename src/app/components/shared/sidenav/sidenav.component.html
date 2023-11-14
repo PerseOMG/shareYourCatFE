@@ -2,8 +2,8 @@
     <ul class="app__navigation">
         <div *ngFor="let box of navigationItems" class="app__navigation-box">
             <li *ngFor="let item of box" class="app__navigation-item" [ngClass]=" item.type === 'logo' ? 'app__navigation-item-logo' : null ">
-                <div class="app__navigation-icon" [ngClass]=" item.type === 'logo' ? 'app__navigation-logo' : null " (click)="onClick(item.redirect)">
-                    <img [src]="'../../../../assets/icons/' + item.icon" [alt]="item.icon" [ngClass]=" item.type == 'logo' ? 'app__navigation-logo-img' : 'app__navigation-icon' ">
+                <div class="app__navigation-icon" [ngStyle]=" squaredIcons.includes(item.icon) ? {'border-radius': '10px'} : {'border-radius': '50%'} " [ngClass]=" item.type === 'logo' ? 'app__navigation-logo' : null " (click)="onClick(item.redirect)">
+                    <img [src]="'../../../../assets/icons/' + item.icon" [alt]="item.icon" [ngStyle]=" squaredIcons.includes(item.icon) ? {'border-radius': '10px'} : {'border-radius': '50%'} " [ngClass]=" item.type == 'logo' ? 'app__navigation-logo-img' : 'app__navigation-icon' ">
                 </div>
             </li>
         </div>
