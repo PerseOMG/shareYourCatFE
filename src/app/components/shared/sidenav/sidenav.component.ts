@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {
+  NAV_ITEMS_CONST,
+  SQUARED_ICONS_CONST,
+} from 'src/assets/app-consts/sidenav.consts';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,50 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit {
-  squaredIcons = ['plus.svg'];
-  navigationItems = [
-    [
-      {
-        icon: 'cat-paws.svg',
-        type: 'logo',
-        isDraggable: false,
-        redirect: '/',
-      },
-      {
-        icon: 'cat-dav.svg',
-        type: 'icon',
-        isDraggable: true,
-        redirect: '/favs',
-      },
-      {
-        icon: 'cat-tendencies.svg',
-        type: 'icon',
-        isDraggable: true,
-        redirect: '/tendencies',
-      },
-    ],
-    [
-      {
-        icon: 'plus.svg',
-        type: 'icon',
-        isDraggable: true,
-        redirect: '/new-post',
-      },
-    ],
-    [
-      {
-        icon: 'user.svg',
-        type: 'icon',
-        isDraggable: true,
-        redirect: '/profile',
-      },
-      {
-        icon: 'language.svg',
-        type: 'icon',
-        isDraggable: true,
-      },
-    ],
-  ];
+  squaredIcons = SQUARED_ICONS_CONST;
+  navigationItems = NAV_ITEMS_CONST;
 
   constructor(private router: Router) {}
 
