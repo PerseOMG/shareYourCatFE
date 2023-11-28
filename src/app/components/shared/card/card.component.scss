@@ -1,0 +1,21 @@
+@import "../../../../styles.scss";
+.card {
+  &__container {
+    background-color: $calico-cat-fifth;
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+    &:hover {
+      transition: box-shadow 0.5s ease-in-out;
+      box-shadow: rgba(236, 157, 104, 0.75) 0px 5px 10px,
+        rgba(236, 157, 104, 0.5) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(236, 157, 104, 0.25) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+  }
+  &__post-image {
+    height: 50%;
+    width: 50%;
+    aspect-ratio: 1/1;
+  }
+}
