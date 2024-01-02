@@ -13,6 +13,7 @@ export class CatOfTheWeekComponent implements OnInit {
     userId: 0,
     date: new Date(),
     post: 'Lol, look ad dis',
+    isLikedByUser: true,
     likes: [
       {
         userId: 1,
@@ -40,4 +41,8 @@ export class CatOfTheWeekComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onFav() {
+    this.postData.isLikedByUser = !this.postData.isLikedByUser;
+  }
 }

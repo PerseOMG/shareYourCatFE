@@ -1,10 +1,20 @@
 @import "../../../../styles.scss";
+h1 {
+  margin: 0;
+}
+
 .card {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__container {
     background-color: $calico-cat-fifth;
     border-radius: 25px;
     height: 100%;
     width: 100%;
+    padding: 8px;
     &:hover {
       transition: box-shadow 0.5s ease-in-out;
       box-shadow: rgba(236, 157, 104, 0.75) 0px 5px 10px,
@@ -13,9 +23,29 @@
         rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
   }
+  &__actions {
+    &-favorite {
+      height: 48px;
+      width: 48px;
+      cursor: pointer;
+      margin-right: 45px;
+    }
+  }
+  &__main {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      &-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  &__comment {
+  }
   &__post-image {
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     aspect-ratio: 1/1;
   }
 }
