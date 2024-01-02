@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './components/shared/sidenav/sidenav.component';
-import { CatOfTheWeekComponent } from './components/shared/card/cat-of-the-week.component';
+import { CatOfTheWeekComponent } from './components/layout/cat-of-the-week/cat-of-the-week.component';
 
 @NgModule({
   declarations: [AppComponent, SidenavComponent, CatOfTheWeekComponent],

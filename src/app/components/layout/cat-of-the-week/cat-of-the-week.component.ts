@@ -29,6 +29,11 @@ export class CatOfTheWeekComponent implements OnInit {
         userName: 'PerseoDMG',
         comment: 'dis nuts',
       },
+      {
+        userId: 0,
+        userName: 'IsraCum',
+        comment: 'Nice Dog',
+      },
     ],
   };
 
