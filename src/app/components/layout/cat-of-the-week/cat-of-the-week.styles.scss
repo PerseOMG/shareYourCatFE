@@ -1,5 +1,6 @@
 @import "../../../../styles.scss";
-h1 {
+h3,
+h2 {
   margin: 0;
 }
 
@@ -35,11 +36,18 @@ h1 {
     &-content {
       display: flex;
       flex-direction: column;
+      padding: 8px;
       &-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
+      &-title {
+        font-weight: bold;
+      }
     }
+  }
+  &__comments {
+    padding: 8px;
   }
   &__comment {
   }

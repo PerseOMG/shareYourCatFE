@@ -4,21 +4,22 @@
         <img (click)="onFav()" class="card__actions-favorite" [src]="postData.isLikedByUser ? '../../../../assets/icons/favorite-fill.svg' : '../../../../assets/icons/favorite.svg'" alt="favorite-icon">
     </div>
     <div class="card__main-content-container">
-
         <div class="card__main-content">
-            <h1>{{postData.post}}</h1>
-            <img class="card__post-image" [src]="postData.image" [alt]="postData.postedBy">
+            <h3 class="card__main-content-title">{{postData.post | uppercase}}</h3>
+            <div class="card__post-image-container">
+                <img class="card__post-image" [src]="postData.image" [alt]="postData.postedBy">
+            </div>
+
         </div>
 
         <div class="card__comments">
-            <div *ngFor="let comment of postData.comments">
+            <div class="card__comment" *ngFor="let comment of postData.comments">
                 <strong>{{comment.userName}}</strong>
                 <span>{{comment.comment}}</span>
             </div>
+            <div>
+                <strong>Posted By: <span>{{postData.postedBy}}</span></strong>
+            </div>
         </div>
-    </div>
-
-    <div>
-        <strong>Posted By: <span>{{postData.postedBy}}</span></strong>
     </div>
 </div>
