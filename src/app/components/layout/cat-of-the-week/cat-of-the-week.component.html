@@ -1,6 +1,6 @@
 <div class="card__container">
     <div class="card__header">
-        <h2>TOP CAT OF THE WEEK</h2>
+        <h2 class="card__header-title">TOP CAT OF THE WEEK</h2>
         <img (click)="onFav()" class="card__actions-favorite" [src]="postData.isLikedByUser ? '../../../../assets/icons/favorite-fill.svg' : '../../../../assets/icons/favorite.svg'" alt="favorite-icon">
     </div>
     <div class="card__main-content-container">
@@ -14,12 +14,12 @@
 
         <div class="card__comments">
             <div class="card__comment" *ngFor="let comment of postData.comments">
-                <strong>{{comment.userName}}</strong>
-                <span>{{comment.comment}}</span>
+                <strong class="card__comment-user">{{comment.userName}}:</strong>
+                <span class="card__comment-comment">{{comment.comment}}</span>
             </div>
         </div>
-        <div>
-            <strong>Posted By: <span>{{postData.postedBy}}</span></strong>
-        </div>
+    </div>
+    <div class="card__footer">
+        <strong>Posted By: <span class="card__footer-posted-by">{{postData.postedBy}}</span></strong>
     </div>
 </div>
