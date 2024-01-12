@@ -46,23 +46,23 @@
     }
   }
   &__comments {
-    padding: 16px 8px;
-    margin-top: 5%;
+    padding: 2rem 0.5rem;
+    margin-top: 0.5rem;
     overflow-y: auto;
-    max-height: 250px;
+    max-height: 15.6rem;
     background-color: white;
     border-radius: 10px;
   }
   &__comment {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 1rem;
     &:not(:first-child) {
-      border-top: 3px solid $calico-cat-secondary;
+      border-top: 0.1rem solid $calico-cat-secondary;
     }
     &-user {
-      margin: 5px 0;
-      letter-spacing: 3px;
+      margin: 0.3rem 0;
+      letter-spacing: 0.2rem;
       &:hover {
         color: $calico-cat-primary;
         cursor: pointer;
@@ -73,11 +73,11 @@
     height: 90%;
     width: 100%;
     aspect-ratio: 1/1;
-    max-height: 300px;
+    max-height: 18.75rem;
   }
   &__footer {
     text-align: end;
-    margin-right: 20px;
+    margin-right: 1.25rem;
     &-posted-by {
       color: white;
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
