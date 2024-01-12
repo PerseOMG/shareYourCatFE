@@ -2,7 +2,7 @@
 .app__sidenav {
   display: block;
   width: 5%;
-  max-width: 75px;
+  max-width: 4.6rem;
   height: 98%;
   background-color: $calico-cat-fifth;
   border-radius: 15px;
@@ -29,14 +29,13 @@
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
 }
 
 .content {
   &__main-post {
     width: 95%;
     height: 50%;
-    margin: 16px auto;
+    margin: 1rem auto;
   }
 }
 
