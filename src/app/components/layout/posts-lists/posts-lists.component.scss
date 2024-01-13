@@ -1,0 +1,11 @@
+@import "../../../../styles.scss";
+.posts {
+  &__main-container {
+    background-color: $calico-cat-fifth;
+    height: 100%;
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 25px;
+    overflow-y: auto;
+  }
+}
