@@ -2,10 +2,26 @@
 .posts {
   &__main-container {
     background-color: $calico-cat-fifth;
-    height: 100%;
+    height: 85vh;
     width: 90%;
     margin: 0 5%;
     border-radius: 25px;
     overflow-y: auto;
+    padding: 16px;
+  }
+  &__container {
+    border-bottom: 2px solid $calico-cat-primary;
+  }
+  &__heading {
+    margin: 0;
+    padding-top: 8px;
+  }
+  &__main-content {
+    display: flex;
+    padding: 16px;
+  }
+  &__image {
+    height: 250px;
+    width: 250px;
   }
 }

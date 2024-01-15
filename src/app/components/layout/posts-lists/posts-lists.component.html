@@ -1,5 +1,13 @@
 <div class="posts__main-container">
     <ng-container *ngFor="let post of posts">
-        <img [src]="'data:image/png;base64,'+post.image" alt="">
+        <div class="posts__container">
+            <h2 class="posts__heading">{{post.postHeading}}</h2>
+            <img [src]="post.userLike ? '../../../../assets/icons/arrow-up-like.svg' : '../../../../assets/icons/arrow-up.svg'" alt="like">
+            <small>Posted By: {{ post.postedBy }}</small>
+            <div class="posts__main-content">
+                <img class="posts__image" [src]="'data:image/png;base64,'+post.image">
+                <h3>{{post.postDescription}}</h3>
+            </div>
+        </div>
     </ng-container>
 </div>
