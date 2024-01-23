@@ -2,16 +2,16 @@
     <ng-container *ngFor="let post of posts">
         <div class="posts__container">
             <div class="posts__heading">
-                <h2 class="posts__heading-title">{{post.postHeading}}</h2>
+                <h2 class="posts__heading-title" (click)="onClick(post.postId)">{{post.postHeading}}</h2>
                 <div class="posts__heading-info">
                     <div class="posts__heading-likes">
-                        <img class="posts__heading-likes-button" [src]="post.userLike ? '../../../../assets/icons/arrow-up-like.svg' : '../../../../assets/icons/arrow-up.svg'" alt="like">
+                        <img class="posts__heading-likes-button" (click)="onLike(post)" [src]="post.userLike ? '../../../../assets/icons/arrow-up-like.svg' : '../../../../assets/icons/arrow-up.svg'" alt="like">
                         <small class="posts__heading-likes-count">{{post.totalLikes}}</small>
                     </div>
                     <small class="posts__heading-user">Posted By: {{ post.postedBy }}</small>
                 </div>
             </div>
-            <div class="posts__main-content">
+            <div class="posts__main-content" (click)="onClick(post.postId)">
                 <img class="posts__image" [src]="'data:image/png;base64,'+post.image">
                 <h5 class="posts__description">{{post.postDescription}}</h5>
             </div>

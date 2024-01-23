@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMAGE_MOCK } from 'src/assets/app-consts/IMAGE_MOCK';
+import { Router } from '@angular/router';
+import { POSTS } from 'src/assets/app-consts/posts.const';
+import { IPost } from 'src/assets/types/posts.types';
 
 @Component({
   selector: 'app-posts-lists',
@@ -7,66 +9,22 @@ import { IMAGE_MOCK } from 'src/assets/app-consts/IMAGE_MOCK';
   styleUrls: ['./posts-lists.component.scss'],
 })
 export class PostsListsComponent implements OnInit {
-  @Input() posts = [
-    {
-      postHeading: 'THIS IS A',
-      postDescription: 'POST',
-      image: IMAGE_MOCK,
-      totalLikes: 1021011,
-      userLike: true,
-      postedBy: 'IsraCum',
-    },
-    {
-      postHeading: 'THIS IS A',
-      postDescription: 'POST',
-      image: IMAGE_MOCK,
-      totalLikes: 1021011,
-      userLike: false,
-      postedBy: 'IsraCum',
-    },
-    {
-      postHeading: 'THIS IS A',
-      postDescription: 'POST',
-      image: IMAGE_MOCK,
-      totalLikes: 1021011,
-      userLike: false,
-      postedBy: 'IsraCum',
-    },
-    {
-      postHeading: 'THIS IS A',
-      postDescription: 'POST',
-      image: IMAGE_MOCK,
-      totalLikes: 1021011,
-      userLike: true,
-      postedBy: 'IsraCum',
-    },
-    {
-      postHeading: 'THIS IS A',
-      postDescription: 'POST',
-      image: IMAGE_MOCK,
-      totalLikes: 1021011,
-      userLike: true,
-      postedBy: 'IsraCum',
-    },
-    {
-      postHeading: 'THIS IS A',
-      postDescription: 'POST',
-      image: IMAGE_MOCK,
-      totalLikes: 1021011,
-      userLike: true,
-      postedBy: 'IsraCum',
-    },
-    {
-      postHeading: 'THIS IS A',
-      postDescription: 'POST',
-      image: IMAGE_MOCK,
-      totalLikes: 1021011,
-      userLike: true,
-      postedBy: 'IsraCum',
-    },
-  ];
+  @Input() posts: IPost[] = POSTS;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  onLike(post: IPost) {
+    post.userLike = !post.userLike;
+    if (post.userLike) {
+      post.totalLikes += 1;
+    } else {
+      post.totalLikes -= 1;
+    }
+  }
+
+  onClick(postId: string) {
+    this.router.navigate(['/post', postId]);
+  }
 }
