@@ -1,1 +1,25 @@
-<p>create-post works!</p>
+<div class="card__container">
+    <div class="card__header">
+        <h2 class="card__header-title">TOP CAT OF THE WEEK</h2>
+        <img (click)="onFav()" class="card__actions-favorite" [src]="postData.isLikedByUser ? '../../../../assets/icons/favorite-fill.svg' : '../../../../assets/icons/favorite.svg'" alt="favorite-icon">
+    </div>
+    <div class="card__main-content-container">
+        <div class="card__main-content">
+            <h3 class="card__main-content-title">{{postData.post | uppercase}}</h3>
+            <div class="card__post-image-container">
+                <img class="card__post-image" [src]="postData.image" [alt]="postData.postedBy">
+            </div>
+
+        </div>
+
+        <div class="card__comments">
+            <div class="card__comment" *ngFor="let comment of postData.comments">
+                <strong class="card__comment-user">{{comment.userName}}:</strong>
+                <span class="card__comment-comment">{{comment.comment}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="card__footer">
+        <strong>Posted By: <span class="card__footer-posted-by">{{postData.postedBy}}</span></strong>
+    </div>
+</div>

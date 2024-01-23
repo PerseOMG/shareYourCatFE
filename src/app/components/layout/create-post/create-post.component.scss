@@ -1,0 +1,107 @@
+@import "../../../../styles.scss";
+.card {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-title {
+      margin: 0;
+    }
+  }
+  &__container {
+    background-color: $calico-cat-fifth;
+    border-radius: 25px;
+    margin: 0 5%;
+    padding: 8px;
+    &:hover {
+      transition: box-shadow 0.5s ease-in-out;
+      box-shadow: rgba(236, 157, 104, 0.75) 0px 5px 10px,
+        rgba(236, 157, 104, 0.5) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(236, 157, 104, 0.25) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+  }
+  &__actions {
+    &-favorite {
+      height: 48px;
+      width: 48px;
+      cursor: pointer;
+      margin-right: 45px;
+    }
+  }
+  &__main {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+      &-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      &-title {
+        margin: 0;
+        letter-spacing: 3px;
+      }
+    }
+  }
+  &__comments {
+    padding: 2rem 0.5rem;
+    margin-top: 0.5rem;
+    overflow-y: auto;
+    max-height: 15.6rem;
+    background-color: white;
+    border-radius: 10px;
+  }
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    &:not(:first-child) {
+      border-top: 0.1rem solid $calico-cat-secondary;
+    }
+    &-user {
+      margin: 0.3rem 0;
+      letter-spacing: 0.2rem;
+      &:hover {
+        color: $calico-cat-primary;
+        cursor: pointer;
+      }
+    }
+  }
+  &__post-image {
+    aspect-ratio: 1/1;
+    max-height: 18.75rem;
+  }
+  &__footer {
+    text-align: end;
+    margin-right: 1.25rem;
+    &-posted-by {
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+  }
+}
+
+// 480 not show
+//  1024 flex - direction row - scroll if overflow
+@media screen and (max-width: $small) {
+  .card__container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $medium) {
+  .card {
+    &__container {
+      overflow-y: auto;
+    }
+    &__main {
+      &-content {
+        &-container {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
